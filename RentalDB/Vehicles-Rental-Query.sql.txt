@@ -1,0 +1,23 @@
+
+
+
+    SELECT vehicles.vehicleName , vehicle_category.categoryName , loction.loctionID
+    FROM `vehicles`
+    LEFT JOIN `vehicle_category` on fk_categoryID = categoryID
+    LEFT JOIN `loction` on fk_loctionID = loctionID
+    UNION
+    SELECT vehicles.vehicleName , vehicle_category.categoryName , loction.loctionID
+    FROM `vehicles`
+    RIGHT JOIN `vehicle_category` on fk_categoryID = categoryID
+    RIGHT JOIN `loction` on fk_loctionID = loctionID
+
+
+
+
+
+SELECT * FROM `rental-office` WHERE 1SELECT customer.firstName, customer.lastName, employee.firstName, employee.lastName, insurance.policyNumber, insurance.cost, vehicles.vehicleName
+FROM `rental-office`
+INNER JOIN `customer` on fk_customerID = customerID
+INNER JOIN `employee` on fk_employeeID = employeeID
+INNER JOIN `insurance` on fk_insuranceID = insuranceID
+INNER JOIN `vehicles` on fk_vehicleID = vehicleID;
